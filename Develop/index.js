@@ -45,20 +45,32 @@ inquirer
             name: "contribute"
         },
     ])
-    .then(function ({ username }) {
+    .then(function ({ username, badge, title, discription, contents, install, usage, licence, test, contribute}) {
 
         const queryUrl = `https://api.github.com/users/${username}`;
         axios
             .get(queryUrl)
             .then(function ({ data }) {
                 console.log(data)
+                let templete =`
+                    Your username is: ${username}
+                    Your badge is: ${badge}
+                    Your project title is: ${title}
+                    Your table of contents is: ${contents}
+                    Your project discription is: ${discription}
+                    This is how you install it: ${install}
+                    This is how you use it: ${usage}
+                    Your project licence: ${licence}
+                    This is how you test your : ${test}
+                    Your badge is: ${contribute}
 
-                // const questions = [
+                `
 
-                // ];
 
-                // function writeToFile(fileName, data) {
-                // }
+                    fs.writeToFile("Project.md", templete, function (err) {
+                        if (err) throw err;
+
+                    })
 
                 // function init() {
 
