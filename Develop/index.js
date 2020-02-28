@@ -63,6 +63,8 @@ inquirer
                    * Your project licence: ${licence}
                    * This is how you test your : ${test}
                    * Who contributed: ${contribute}
+                   * git hub avatar: ${data.avatar_url}
+                   * email: ${data.email}
 
                 `;
 
