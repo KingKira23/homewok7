@@ -53,16 +53,16 @@ inquirer
             .then(function ({ data }) {
                 console.log(data)
                 let templete =`
-                    Your username is: ${username}
-                    Your badge is: ${badge}
-                    Your project title is: ${title}
-                    Your table of contents is: ${contents}
-                    Your project discription is: ${discription}
-                    This is how you install it: ${install}
-                    This is how you use it: ${usage}
-                    Your project licence: ${licence}
-                    This is how you test your : ${test}
-                    Who contributed: ${contribute}
+                   * Your username is: ${username}
+                   * Your badge is: ${badge}
+                   * Your project title is: ${title}
+                   * Your table of contents is: ${contents}
+                   * Your project discription is: ${discription}
+                   * This is how you install it: ${install}
+                   * This is how you use it: ${usage}
+                   * Your project licence: ${licence}
+                   * This is how you test your : ${test}
+                   * Who contributed: ${contribute}
 
                 `;
 
