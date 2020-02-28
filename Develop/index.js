@@ -45,7 +45,7 @@ inquirer
             name: "contribute"
         },
     ])
-    .then(function ({ username, badge, title, discription, contents, install, usage, licence, test, contribute}) {
+    .then(function ({ username, badge, title, discription, contents, install, usage, licence, test, contribute,}) {
 
         const queryUrl = `https://api.github.com/users/${username}`;
         axios
@@ -62,15 +62,19 @@ inquirer
                     This is how you use it: ${usage}
                     Your project licence: ${licence}
                     This is how you test your : ${test}
-                    Your badge is: ${contribute}
+                    Who contributed: ${contribute}
 
-                `
+                `;
 
 
-                    fs.writeToFile("Project.md", templete, function (err) {
-                        if (err) throw err;
+                    fs.writeFile("Project.md", templete, err => {
+                        if (err) {
+                            throw err
+                        }
+                        
 
                     })
+
 
                 // function init() {
 
